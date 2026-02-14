@@ -176,5 +176,14 @@ export const WEEK_DATA = {
                 risks: ["물류/배송비 이슈", "매주 소비에 대한 가격 부담"],
             },
         ],
+
+        realExecution: {
+            status: "pending", // pending | commited
+            plan: [
+                // 여기에 실제 실행할 위시의 아이디어(또는 수정된 아이디어)를 적으세요
+                // 예: { title: "수요일 10PM 타임딜", detail: "인스타 스토리로만 1시간 게릴라 오픈" }
+            ],
+            retro: "", // 실행 후 회고 (성공/실패 원인)
+        },
     },
 };

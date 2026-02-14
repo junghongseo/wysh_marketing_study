@@ -9,6 +9,7 @@ import ChapterAnalysis from './components/ChapterAnalysis';
 import WyshApplication from './components/WyshApplication';
 import TrendSection from './components/TrendSection';
 import IdeaCard from './components/IdeaCard';
+import ExecutionLogger from './components/ExecutionLogger';
 
 export default function App() {
   const {
@@ -80,6 +81,9 @@ export default function App() {
               ))}
             </div>
           </div>
+
+          {/* [NEW] 실제 실행 로그 — 사용자가 직접 수정하여 AI에게 피드백 전달 */}
+          <ExecutionLogger data={weekData.realExecution} />
         </>
       ) : (
         /* 빈 상태 */
