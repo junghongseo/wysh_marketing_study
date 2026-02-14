@@ -83,7 +83,7 @@ export default function App() {
           </div>
 
           {/* [NEW] 실제 실행 로그 — 사용자가 직접 수정하여 AI에게 피드백 전달 */}
-          <ExecutionLogger data={weekData.realExecution} />
+          <ExecutionLogger />
         </>
       ) : (
         /* 빈 상태 */
