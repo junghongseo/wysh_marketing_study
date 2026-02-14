@@ -64,7 +64,7 @@ export const WEEK_DATA = {
     1: {
         week: 1,
         chapter: "Chapter 1: Not Mass, Not Spam, Not Shameful",
-        status: "completed",
+        status: "active",
         analysis: {
             coreMessage: "마케팅은 '변화를 일으키는 행위(making change happen)'이다.",
             keyPrinciples: [
