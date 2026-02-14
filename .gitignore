@@ -1,0 +1,23 @@
+# 환경 변수 (API 키 등 민감 정보)
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node.js (Dashboard)
+node_modules/
+dist/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# 브라우저 자동화 임시 파일
+/tmp/

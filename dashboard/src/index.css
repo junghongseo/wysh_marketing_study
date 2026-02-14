@@ -1,0 +1,1239 @@
+/* =============================================================
+   WYSH Marketing Dashboard — 디자인 시스템
+   왜: 다크 모드 + 글래스모피즘으로 프리미엄 대시보드 느낌 구현
+   모든 색상/간격/폰트를 CSS 변수로 관리하여 일관성 유지
+   ============================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+/* ── CSS 변수 (Design Tokens) ── */
+:root {
+  /* 왜: WYSH 브랜드의 프리미엄/클린 이미지를 반영한 컬러 팔레트 */
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #12121a;
+  --bg-card: rgba(255, 255, 255, 0.04);
+  --bg-glass: rgba(255, 255, 255, 0.06);
+  --bg-glass-hover: rgba(255, 255, 255, 0.10);
+
+  --text-primary: #f0f0f5;
+  --text-secondary: #8b8ba0;
+  --text-tertiary: #5a5a70;
+  --text-accent: #a78bfa;
+
+  /* 왜: 그래디언트로 활력과 에너지를 표현 (WYSH = Active Lifestyle) */
+  --gradient-primary: linear-gradient(135deg, #a78bfa, #818cf8, #6366f1);
+  --gradient-accent: linear-gradient(135deg, #34d399, #10b981);
+  --gradient-warm: linear-gradient(135deg, #fb923c, #f97316);
+  --gradient-rose: linear-gradient(135deg, #fb7185, #f43f5e);
+
+  --color-purple: #a78bfa;
+  --color-green: #34d399;
+  --color-orange: #fb923c;
+  --color-rose: #fb7185;
+  --color-blue: #60a5fa;
+  --color-cyan: #22d3ee;
+
+  /* MFS 점수 색상 */
+  --mfs-excellent: #34d399;
+  --mfs-good: #60a5fa;
+  --mfs-moderate: #fbbf24;
+  --mfs-low: #f87171;
+
+  /* 카테고리 색상 */
+  --cat-content: #a78bfa;
+  --cat-branding: #fbbf24;
+  --cat-targeting: #fb7185;
+  --cat-conversion: #34d399;
+  --cat-retention: #60a5fa;
+
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-accent: rgba(167, 139, 250, 0.3);
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-full: 50px;
+
+  --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --shadow-glow: 0 0 40px rgba(167, 139, 250, 0.15);
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.2);
+
+  --font-display: 'Outfit', sans-serif;
+  --font-body: 'Noto Sans KR', 'Outfit', sans-serif;
+
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.25s ease;
+  --transition-slow: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ── Reset & Base ── */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* 왜: 배경에 미묘한 그래디언트를 넣어 깊이감 + 프리미엄 분위기 */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(ellipse at 20% 0%, rgba(99, 102, 241, 0.08), transparent 60%),
+    radial-gradient(ellipse at 80% 100%, rgba(167, 139, 250, 0.06), transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Typography Scale ── */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+/* ── Glass Card (공통 mixin) ── */
+.glass-card {
+  background: var(--bg-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+}
+
+.glass-card:hover {
+  background: var(--bg-glass-hover);
+  border-color: var(--border-accent);
+  box-shadow: var(--shadow-glow);
+}
+
+/* ── Layout ── */
+.app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+/* ── Hero Banner ── */
+/* 왜: 대시보드 최상단에 시각적 임팩트를 주어 프로젝트 정체성을 즉시 전달 */
+.hero-banner {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+  min-height: 240px;
+  border: 1px solid var(--border-subtle);
+}
+
+.hero-banner__image {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* 왜: 이미지 위에 그래디언트 오버레이로 텍스트 가독성 확보 */
+.hero-banner__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg,
+      rgba(10, 10, 15, 0.7) 0%,
+      rgba(10, 10, 15, 0.3) 40%,
+      rgba(10, 10, 15, 0.6) 100%);
+  display: flex;
+  align-items: center;
+  padding: 2rem 2.5rem;
+}
+
+.hero-banner__content {
+  max-width: 600px;
+}
+
+.hero-banner__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.8rem;
+  background: rgba(167, 139, 250, 0.2);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(167, 139, 250, 0.3);
+  border-radius: var(--radius-full);
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-purple);
+  margin-bottom: 0.75rem;
+}
+
+.hero-banner__title {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.hero-banner__wysh {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-banner__separator {
+  color: var(--text-tertiary);
+  font-weight: 300;
+  font-size: 1.8rem;
+}
+
+.hero-banner__godin {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.hero-banner__subtitle {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+/* 왜: 미니 스탯 카드로 진행 상황을 한눈에 파악 */
+.hero-banner__stats {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 0.75rem 1.25rem;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  width: fit-content;
+}
+
+.hero-banner__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-banner__stat-value {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.hero-banner__stat-label {
+  font-size: 0.65rem;
+  color: var(--text-tertiary);
+  margin-top: 0.1rem;
+}
+
+.hero-banner__stat-divider {
+  width: 1px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ── Video Player ── */
+/* 왜: 주차별 유튜브 영상을 프리미엄하게 임베드하여 학습 경험 강화 */
+.video-section {
+  margin-bottom: 2.5rem;
+}
+
+.video-card {
+  overflow: hidden;
+  padding: 0;
+}
+
+/* 왜: 16:9 비율을 유지하는 반응형 비디오 컨테이너 */
+.video-card__player {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  /* 16:9 비율 */
+  background: #000;
+}
+
+.video-card__iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* 왜: 썸네일 클릭으로 lazy-load — 초기 페이지 로딩 성능 최적화 */
+.video-card__thumbnail {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-card__thumbnail-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow), filter var(--transition-base);
+}
+
+.video-card__thumbnail:hover .video-card__thumbnail-img {
+  transform: scale(1.03);
+  filter: brightness(0.7);
+}
+
+/* 왜: 유튜브 재생 버튼 SVG로 네이티브 유튜브 UI 느낌 유지 */
+.video-card__play-btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 52px;
+  transition: transform var(--transition-base), opacity var(--transition-base);
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+}
+
+.video-card__thumbnail:hover .video-card__play-btn {
+  transform: scale(1.1);
+}
+
+.video-card__play-btn svg {
+  opacity: 0.9;
+}
+
+.video-card__thumbnail:hover .video-card__play-btn svg {
+  opacity: 1;
+}
+
+/* 왜: 영상 아래 정보 카드로 챕터 매핑 명확히 표시 */
+.video-card__info {
+  padding: 1.25rem 1.5rem;
+}
+
+.video-card__title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.video-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.8rem;
+  color: var(--text-tertiary);
+}
+
+.video-card__chapter-badge {
+  display: inline-flex;
+  padding: 0.2rem 0.6rem;
+  background: rgba(167, 139, 250, 0.15);
+  border-radius: var(--radius-full);
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--color-purple);
+}
+
+.video-card__channel {
+  color: var(--text-tertiary);
+}
+
+/* 왜: 영상이 없는 주차의 빈 상태 표시 */
+.video-empty {
+  text-align: center;
+  padding: 2.5rem 2rem;
+}
+
+.video-empty__icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.5;
+}
+
+.video-empty__text {
+  font-size: 0.85rem;
+  color: var(--text-tertiary);
+}
+
+/* ── Progress Bar (전체 진행률) ── */
+.progress-section {
+  margin-bottom: 2.5rem;
+}
+
+.progress-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+}
+
+.progress-bar__track {
+  flex: 1;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progress-bar__fill {
+  height: 100%;
+  background: var(--gradient-primary);
+  border-radius: var(--radius-full);
+  transition: width 1s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+/* 왜: 빛나는 애니메이션으로 진행 중인 느낌 부여 */
+.progress-bar__fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4));
+  border-radius: var(--radius-full);
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.progress-bar__label {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.progress-bar__percentage {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  min-width: 60px;
+  text-align: right;
+}
+
+/* ── Timeline (23주 타임라인) ── */
+.timeline-section {
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.section-title__icon {
+  font-size: 1.1rem;
+}
+
+.timeline {
+  display: flex;
+  gap: 4px;
+  padding: 1.5rem;
+  padding-right: 2.5rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.timeline::-webkit-scrollbar {
+  display: none;
+}
+
+.timeline__week {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  border: 1px solid transparent;
+  position: relative;
+}
+
+/* 왜: 완료된 주차는 그래디언트 배경, 미완료는 어두운 배경으로 구분 */
+.timeline__week--completed {
+  background: var(--gradient-primary);
+  color: white;
+}
+
+.timeline__week--current {
+  border: 2px solid var(--color-purple);
+  color: var(--color-purple);
+  background: rgba(167, 139, 250, 0.1);
+  animation: pulse-border 2s ease-in-out infinite;
+}
+
+@keyframes pulse-border {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(167, 139, 250, 0.3);
+  }
+
+  50% {
+    box-shadow: 0 0 0 6px rgba(167, 139, 250, 0);
+  }
+}
+
+.timeline__week--locked {
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-tertiary);
+}
+
+.timeline__week--selected {
+  transform: scale(1.15);
+  box-shadow: var(--shadow-glow);
+}
+
+.timeline__week:hover {
+  transform: scale(1.1);
+}
+
+/* ── Chapter Section ── */
+.chapter-section {
+  margin-bottom: 2.5rem;
+}
+
+.chapter-header {
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 왜: 챕터 카드 상단에 미묘한 그래디언트 라인으로 포인트 */
+.chapter-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--gradient-primary);
+}
+
+.chapter-header__week-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  background: rgba(167, 139, 250, 0.15);
+  border-radius: var(--radius-full);
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-purple);
+  margin-bottom: 1rem;
+}
+
+.chapter-header__title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.chapter-header__subtitle {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+/* ── Analysis Grid ── */
+.analysis-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.analysis-card {
+  padding: 1.5rem;
+}
+
+.analysis-card__title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-tertiary);
+  margin-bottom: 1rem;
+}
+
+.analysis-card__content {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  line-height: 1.8;
+}
+
+.analysis-card__highlight {
+  background: rgba(167, 139, 250, 0.1);
+  border-left: 3px solid var(--color-purple);
+  padding: 1rem 1.25rem;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  line-height: 1.8;
+}
+
+/* ── Steps List ── */
+.steps-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.steps-list__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-sm);
+  transition: background var(--transition-fast);
+}
+
+.steps-list__item:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.steps-list__number {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: white;
+}
+
+.steps-list__content {
+  flex: 1;
+}
+
+.steps-list__title {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.2rem;
+}
+
+.steps-list__desc {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+/* ── Principles List ── */
+.principles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.principle-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.principle-item__dot {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  margin-top: 0.55rem;
+}
+
+.principle-item__label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.15rem;
+}
+
+.principle-item__desc {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+/* ── Trends Section ── */
+.trends-section {
+  margin-bottom: 2.5rem;
+}
+
+.trends-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.trends-stats {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  padding: 1.25rem 1.5rem;
+}
+
+.trends-stat {
+  text-align: center;
+}
+
+.trends-stat__value {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.trends-stat__label {
+  font-size: 0.72rem;
+  color: var(--text-tertiary);
+  margin-top: 0.15rem;
+}
+
+.trends-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.75rem;
+}
+
+.trend-chip {
+  padding: 0.85rem 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.trend-chip__icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.trend-chip__name {
+  font-weight: 600;
+  font-size: 0.82rem;
+  margin-bottom: 0.15rem;
+}
+
+.trend-chip__desc {
+  font-size: 0.72rem;
+  color: var(--text-tertiary);
+  line-height: 1.5;
+}
+
+/* ── Ideas Section ── */
+.ideas-section {
+  margin-bottom: 2.5rem;
+}
+
+.ideas-summary {
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.ideas-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* ── Idea Card ── */
+.idea-card {
+  padding: 1.5rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.idea-card--rank-1::before,
+.idea-card--rank-2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--gradient-primary);
+}
+
+.idea-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.idea-card__title-area {
+  flex: 1;
+}
+
+.idea-card__badges {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.idea-card__category {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--radius-full);
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.idea-card__category--콘텐츠 {
+  background: rgba(167, 139, 250, 0.15);
+  color: var(--cat-content);
+}
+
+.idea-card__category--브랜딩 {
+  background: rgba(251, 191, 36, 0.15);
+  color: var(--cat-branding);
+}
+
+.idea-card__category--타겟팅 {
+  background: rgba(251, 113, 133, 0.15);
+  color: var(--cat-targeting);
+}
+
+.idea-card__category--전환 {
+  background: rgba(52, 211, 153, 0.15);
+  color: var(--cat-conversion);
+}
+
+.idea-card__category--리텐션 {
+  background: rgba(96, 165, 250, 0.15);
+  color: var(--cat-retention);
+}
+
+.idea-card__recommendation {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--radius-full);
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.idea-card__recommendation--즉시\ 실행 {
+  background: rgba(52, 211, 153, 0.15);
+  color: var(--mfs-excellent);
+}
+
+.idea-card__recommendation--우선순위 {
+  background: rgba(96, 165, 250, 0.15);
+  color: var(--mfs-good);
+}
+
+.idea-card__title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.idea-card__mfs-score {
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.idea-card__mfs-value {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.idea-card__mfs-value--excellent {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.idea-card__mfs-value--good {
+  color: var(--color-blue);
+}
+
+.idea-card__mfs-label {
+  font-size: 0.65rem;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 0.2rem;
+}
+
+.idea-card__description {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+/* ── MFS 바 차트 ── */
+.mfs-bars {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.mfs-bar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.mfs-bar__label {
+  font-size: 0.6rem;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.mfs-bar__track {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.mfs-bar__fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mfs-bar__fill--positive {
+  background: var(--gradient-accent);
+}
+
+.mfs-bar__fill--negative {
+  background: var(--gradient-warm);
+}
+
+.mfs-bar__value {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+/* ── Idea Detail (확장) ── */
+.idea-detail {
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-subtle);
+  margin-top: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.idea-detail__item {
+  font-size: 0.82rem;
+}
+
+.idea-detail__label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-tertiary);
+  margin-bottom: 0.3rem;
+}
+
+.idea-detail__value {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.idea-detail__item--full {
+  grid-column: 1 / -1;
+}
+
+/* ── Risks Tags ── */
+.risks-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.3rem;
+}
+
+.risk-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.2rem 0.6rem;
+  background: rgba(248, 113, 113, 0.1);
+  border-radius: var(--radius-full);
+  font-size: 0.7rem;
+  color: var(--color-rose);
+}
+
+/* ── WYSH Application Section ── */
+.wysh-section {
+  margin-bottom: 2.5rem;
+}
+
+.wysh-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.wysh-card {
+  padding: 1.5rem;
+}
+
+.wysh-card__icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.wysh-card__title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-tertiary);
+  margin-bottom: 0.5rem;
+}
+
+.wysh-card__content {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  line-height: 1.8;
+}
+
+/* ── Threats Section ── */
+.threats-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.threat-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  background: rgba(248, 113, 113, 0.06);
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--color-rose);
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.threat-item__icon {
+  flex-shrink: 0;
+}
+
+/* ── Footer ── */
+.footer {
+  text-align: center;
+  padding: 2rem 0;
+  border-top: 1px solid var(--border-subtle);
+  margin-top: 3rem;
+}
+
+.footer__text {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+}
+
+/* ── Empty State ── */
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.empty-state__icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.empty-state__title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.empty-state__desc {
+  font-size: 0.85rem;
+  color: var(--text-tertiary);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .app {
+    padding: 1rem;
+  }
+
+  .hero-banner__image {
+    height: 200px;
+  }
+
+  .hero-banner__overlay {
+    padding: 1.25rem;
+  }
+
+  .hero-banner__wysh {
+    font-size: 1.5rem;
+  }
+
+  .hero-banner__separator {
+    font-size: 1.2rem;
+  }
+
+  .hero-banner__godin {
+    font-size: 1.2rem;
+  }
+
+  .hero-banner__subtitle {
+    font-size: 0.75rem;
+  }
+
+  .hero-banner__stats {
+    gap: 0.75rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .hero-banner__stat-value {
+    font-size: 1rem;
+  }
+
+  .analysis-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trends-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wysh-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .idea-detail {
+    grid-template-columns: 1fr;
+  }
+
+  .chapter-header__title {
+    font-size: 1.3rem;
+  }
+
+  .timeline__week {
+    width: 36px;
+    height: 36px;
+    font-size: 0.65rem;
+  }
+}

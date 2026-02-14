@@ -1,0 +1,61 @@
+{
+    "scan_date": "2026-02-14",
+    "week": 1,
+    "brand": {
+        "name": "WYSH",
+        "tagline": "NUTRITION IN STYLE",
+        "og_description": "액티브 라이프스타일을 서포트하는 무지방, 고단백, 식이섬유 함유 그릭요거트 WYSH GREEK 019",
+        "product": "WYSH GREEK 019 (무지방 고단백 그릭요거트)",
+        "site_url": "https://wysh.it/",
+        "instagram": "@wyshlifestyle",
+        "kakaotalk": "wysh",
+        "email": "wysh@mudscone.com",
+        "platform": "식스샵 (SixShop)"
+    },
+    "brand_story": {
+        "en": "WYSH was never just about yogurt. It started with a question: How can food move with us — not against us? We set out to build functional nutrition for those who live boldly, move actively, and express themselves stylishly. Yogurt just happened to be the first thing we reinvented. High-performance. Zero compromise. Fuel your life, in style.",
+        "ko": "WYSH는 단순히 요거트를 만들기 위해 시작된 브랜드가 아닙니다. 우리는 스스로에게 질문했죠. '식품도 우리의 라이프스타일을 따라갈 수는 없을까?' 우리는 대담하게 살고, 능동적으로 움직이며, 스타일을 잃지 않는 사람들을 위한 기능성 푸드를 만들기 위해 WYSH를 시작했습니다. 그 첫 번째 혁신이 요거트였을 뿐입니다. 고기능. 무타협. 당신의 라이프스타일을 위한 새로운 식품, WYSH."
+    },
+    "current_promotions": [
+        {
+            "type": "discount",
+            "message": "연휴 기간 10% OFF",
+            "shipping_date": "2026-02-23(월)"
+        },
+        {
+            "type": "coupon",
+            "message": "카카오톡 채널 추가 시 배송비 무료 쿠폰 증정",
+            "link": "http://pf.kakao.com/_xoxgpDn/coupons/_iDU"
+        }
+    ],
+    "site_sections": [
+        "LOOKBOOKS",
+        "SHOP",
+        "ABOUT US",
+        "REVIEW",
+        "CUSTOMER SERVICE",
+        "LIFESTYLE"
+    ],
+    "brand_keywords": [
+        "액티브 라이프스타일",
+        "무지방",
+        "고단백",
+        "식이섬유",
+        "그릭요거트",
+        "기능성 푸드",
+        "스타일",
+        "고기능",
+        "무타협",
+        "NUTRITION IN STYLE"
+    ],
+    "chapter_1_alignment": {
+        "current_positioning": "기능성 + 라이프스타일 브랜드 (Not just yogurt)",
+        "change_story_present": true,
+        "smallest_viable_market_defined": "대담하게 살고 능동적으로 움직이며 스타일을 잃지 않는 사람들",
+        "areas_for_improvement": [
+            "메인 페이지에 브랜드 스토리 노출 부족 - 프로모션 중심",
+            "소속감/문화 형성 콘텐츠 부족 - 커뮤니티 요소 없음",
+            "고객 Ritual(사용 의식) 제안 콘텐츠 부족"
+        ]
+    }
+}

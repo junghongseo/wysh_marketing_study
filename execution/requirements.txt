@@ -1,0 +1,18 @@
+# WYSH x Seth Godin Marketing Execution Engine
+# Python 의존성
+
+# --- 유튜브 트랜스크립트 ---
+# 왜: Seth Godin 관련 유튜브 영상의 자막을 추출하기 위함
+youtube-transcript-api>=0.6.0
+
+# --- 브라우저 자동화 ---
+# 왜: WYSH 쇼핑몰/인스타그램 스캔에 Playwright 사용
+playwright>=1.40.0
+
+# --- HTTP 클라이언트 ---
+# 왜: deep-research 스킬(Gemini API) 호출에 필요
+httpx>=0.25.0
+
+# --- 환경 변수 ---
+# 왜: .env 파일에서 API 키 등 민감 정보를 로드
+python-dotenv>=1.0.0

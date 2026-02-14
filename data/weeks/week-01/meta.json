@@ -1,0 +1,15 @@
+{
+  "week": 1,
+  "chapter": "Chapter 1: Not Mass, Not Spam, Not Shameful...",
+  "started_at": "2026-02-14T10:53:36.679979+09:00",
+  "completed_at": null,
+  "completed_steps": [
+    "transcript_extracted",
+    "notebooklm_analyzed",
+    "wysh_context_collected",
+    "trends_researched",
+    "ideas_generated",
+    "feedback_applied"
+  ],
+  "ideas_count": 0
+}

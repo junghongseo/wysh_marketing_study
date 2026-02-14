@@ -1,0 +1,21 @@
+{
+  "project": "WYSH x Seth Godin Marketing Execution Engine",
+  "total_weeks": 23,
+  "current_week": 1,
+  "current_chapter": "Chapter 1: Not Mass, Not Spam, Not Shameful...",
+  "status": "in_progress",
+  "youtube_urls": [],
+  "notebooklm_notebook_url": null,
+  "created_at": "2026-02-14T10:45:00+09:00",
+  "updated_at": "2026-02-14T12:07:35.078450+09:00",
+  "history": [
+    {
+      "week": 1,
+      "chapter": "Chapter 1: Not Mass, Not Spam, Not Shameful...",
+      "started_at": "2026-02-14T10:53:36.680517+09:00",
+      "completed_at": null,
+      "ideas_count": 0,
+      "feedback_applied": false
+    }
+  ]
+}
