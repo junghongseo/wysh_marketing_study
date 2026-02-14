@@ -1,8 +1,9 @@
 # SPEC.md — WYSH x Seth Godin Marketing Execution Engine
 
-> **버전**: v1.0  
+> **버전**: v1.1  
 > **작성일**: 2026-02-14  
-> **상태**: 설계 승인 대기  
+> **최종 수정**: 2026-02-14  
+> **상태**: ✅ 설계 승인 완료 & 실행 중  
 
 ---
 
@@ -83,6 +84,7 @@ graph LR
 | **아이디어 카드** | MFS 점수 포함 3~5개 액션 아이디어 |
 | **WYSH 컨텍스트 패널** | 최신 쇼핑몰/인스타 스냅샷 |
 | **히스토리 뷰** | 지난 주차들의 요약 타임라인 |
+| **실행 계획 로그** | Firebase 연동 CRUD — 실행할 마케팅 액션 기록/관리 |
 
 ---
 
@@ -136,7 +138,10 @@ This Is Marketing/
 │
 └── dashboard/             # React 대시보드 (Vite)
     ├── src/
+    │   ├── firebase.js     # Firebase 초기화 (Firestore)
     │   ├── components/
+    │   │   ├── ExecutionLogger.jsx  # 실행 계획 CRUD
+    │   │   └── IdeaCard.jsx         # MFS 아이디어 카드
     │   ├── hooks/          # 비즈니스 로직 격리
     │   ├── data/           # ../data 와 연결
     │   └── App.jsx

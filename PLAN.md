@@ -1,8 +1,9 @@
 # PLAN.md — WYSH x Seth Godin Marketing Execution Engine 구현 계획
 
-> **버전**: v1.0  
+> **버전**: v1.1  
 > **작성일**: 2026-02-14  
-> **상태**: 승인 대기  
+> **최종 수정**: 2026-02-14  
+> **상태**: ✅ 승인 완료 & Phase 5 실행 중  
 > **선행 문서**: [SPEC.md](file:///Users/hong/Desktop/Antigravity/This%20Is%20Marketing/SPEC.md)
 
 ---
@@ -146,8 +147,18 @@ python-dotenv>=1.0.0
   - `IdeaCard.jsx` — MFS 점수 포함 아이디어 카드
   - `WyshContextPanel.jsx` — 쇼핑몰/인스타 스냅샷
   - `HistoryTimeline.jsx` — 지난 주차 요약
+  - `ExecutionLogger.jsx` — Firebase 연동 실행 계획 CRUD
 - `hooks/` 에 데이터 로딩/전환 로직 격리
 - `data/` 디렉토리의 JSON 파일을 직접 import 하거나 API로 제공
+
+---
+
+### Firebase 연동 (Phase 5)
+
+#### [NEW] [firebase.js](file:///Users/hong/Desktop/Antigravity/This%20Is%20Marketing/dashboard/src/firebase.js)
+- Firebase App & Firestore 초기화
+- `execution_plans` 컬렉션으로 실행 계획 CRUD
+- Cloudflare 배포를 위해 설정값 하드코딩 (프로토타입 단계)
 
 ---
 
