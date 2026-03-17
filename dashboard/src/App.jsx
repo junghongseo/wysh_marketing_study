@@ -19,10 +19,10 @@ export default function App() {
     currentChapter,
     progress,
     sortedIdeas,
-  } = useWeekData(1);
+  } = useWeekData(2);
 
   // 왜: 완료된 주차 목록을 계산하여 타임라인에 전달
-  const completedWeeks = weekData ? [weekData.week] : [];
+  const completedWeeks = progress.completedWeekNumbers || [];
 
   return (
     <div className="app">

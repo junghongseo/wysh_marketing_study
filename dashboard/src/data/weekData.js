@@ -64,7 +64,7 @@ export const WEEK_DATA = {
     1: {
         week: 1,
         chapter: "Chapter 1: Not Mass, Not Spam, Not Shameful",
-        status: "active",
+        status: "completed",
         analysis: {
             coreMessage: "마케팅은 '변화를 일으키는 행위(making change happen)'이다.",
             keyPrinciples: [
@@ -184,6 +184,91 @@ export const WEEK_DATA = {
                 // 예: { title: "수요일 10PM 타임딜", detail: "인스타 스토리로만 1시간 게릴라 오픈" }
             ],
             retro: "", // 실행 후 회고 (성공/실패 원인)
+        },
+    },
+    2: {
+        week: 2,
+        chapter: "Chapter 2 & 3: 사람들은 무엇을 원하는가 & 최소유효시장",
+        status: "active",
+        analysis: {
+            coreMessage: "우리가 파는 것은 제품이 아니라 '기분'이다. 최소유효시장에 집중하라.",
+            keyPrinciples: [
+                { label: "우리가 파는 것은 기분이다", desc: "제품 구매는 라이프스타일과 소속감, 자기효능감을 얻기 위함" },
+                { label: "최소유효시장", desc: "모두를 만족시키기보다 핵심 팬덤에게 인정받아야 함" },
+                { label: "문화의 가시화", desc: "'우리 같은 사람들은 이런 일을 한다'를 증명" },
+            ],
+            fiveSteps: [
+                { step: 1, title: "기분 정의", desc: "트렌디한 웰니스 라이프를 실천하는 세련된 기분 선사" },
+                { step: 2, title: "기회 전환", desc: "단순 정보 습득을 즉각적인 구매와 실천으로 연결" },
+                { step: 3, title: "희소성 레버리지", desc: "품절을 위기가 아닌 브랜드의 배타적 가치로 승화" },
+                { step: 4, title: "가시화", desc: "고객이 실천하는 모습을 공간에 전시하여 커뮤니티 형성" },
+                { step: 5, title: "신뢰 구축", desc: "매주 발행하는 트렌드 레터로 전문성과 관심 이어가기" },
+            ],
+            wyshApplication: {
+                svm: "단순히 제품을 소비하는 것이 아니라, 자기 관리에 진심인 소수정예 그룹",
+                changeStory: "알기만 하는 트렌드에서 멈추는 것이 아니라, 웰니스 리추얼을 직접 실천하고 증명하는 삶으로 변화",
+                culture: "WYSH 피플은 트렌드를 읽고 나만의 리추얼 플랜을 세운다.",
+                xyStatement: "WYSH는 글로벌 웰니스 트렌드를 내 삶에 적용하고 싶은 사람들이(X), 정성스러운 나만의 웰니스 문화를 실천하도록 돕는다(Y).",
+            },
+        },
+        trends: {
+            marketSize: "정보성 메시지 전환 테스트 가설 검증중",
+            marketShare: "노출 229건 / 클릭 44건",
+            keyTrends: [
+                { name: "정보의 실천화", desc: "지식을 아는 데 그치지 않고 구체적 패키지 구매로 이행" },
+                { name: "비자발적 희소성", desc: "품절이나 대기가 프리미엄의 인식 지표로 작용" },
+                { name: "소셜 리추얼 인증", desc: "개인의 활동을 커뮤니티에 올려 정체성을 각인" },
+            ],
+            threats: [
+                "정보만 재미로 소비하고 제품 경험으로 이어지지 않는 현상",
+                "이벤트 당첨 목적의 허수 트래픽 유입",
+            ],
+        },
+        ideas: [
+            {
+                id: 1,
+                title: "'Trend to Table' 원클릭 패키지",
+                category: "전환",
+                categoryEmoji: "🛒",
+                description: "트렌드 아티클 하단에 해당 트렌드를 즉시 적용할 수 있는 '이번 주 위시 리추얼 패키지' 시크릿 구매 링크 삽입.",
+                chapterPrinciple: "우리가 파는 것은 제품이 아니라 특정 기분과 열쇠다.",
+                smallestViableAction: "다음 주 트렌드 아티클 하단에 전용 큐레이션 세트 상품 구매 버튼 추가",
+                successMetric: "아티클 트래픽 대비 구매 전환율 5%",
+                mfs: { impact: 5, fit: 5, speed: 4, effort: 2, cost: 1, total: 11 },
+                recommendation: "즉시 실행",
+                risks: ["품절 시 기대감 단절 위험"],
+            },
+            {
+                id: 2,
+                title: "품절 보상 레버리지 & VIP Waiting",
+                category: "커뮤니티",
+                categoryEmoji: "👑",
+                description: "품절을 '희소성'과 '최상 품질 유지'의 결과로 소구. 대기 명단을 받아 가장 먼저 입고 알림을 주는 'WYSH 소수 정예 알림방' 운영.",
+                chapterPrinciple: "최소유효시장(Smallest Viable Market)의 배타적 소속감 자극.",
+                smallestViableAction: "품절 시 쇼핑몰 팝업 안내 및 대기 명단 폼 연결",
+                successMetric: "품절 기간 중 대기 명단 30명 이상 확보",
+                mfs: { impact: 4, fit: 5, speed: 5, effort: 2, cost: 1, total: 11 },
+                recommendation: "즉시 실행",
+                risks: ["알림 후 실제 전환율 하락의 우려"],
+            },
+            {
+                id: 3,
+                title: "'Show Your Ritual' 인증 이벤트",
+                category: "바이럴",
+                categoryEmoji: "📸",
+                description: "인스타그램 스토리로 나만의 웰니스 스낵 리추얼을 공유하게 하고 위시 체험권 등 리워드 증정하여 문화를 가시화함.",
+                chapterPrinciple: "'우리 같은 사람들은 이런 일을 한다'는 부족 문화 형성.",
+                smallestViableAction: "카톡 메시지에 인증 이벤트 안내 및 인스타 태그 유도",
+                successMetric: "인스타그램 스토리 태그 20건 이상 확보",
+                mfs: { impact: 3, fit: 4, speed: 4, effort: 3, cost: 2, total: 8 },
+                recommendation: "우선순위",
+                risks: ["마이크로 타겟 대상이라 참여율 저조 가능성"],
+            },
+        ],
+        realExecution: {
+            status: "pending",
+            plan: [],
+            retro: "",
         },
     },
 };

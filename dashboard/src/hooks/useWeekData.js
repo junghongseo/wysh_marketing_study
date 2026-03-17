@@ -17,13 +17,15 @@ export function useWeekData(weekNumber) {
 
     // 왜: 전체 주차 진행 현황을 한눈에 보여주기 위한 계산
     const progress = useMemo(() => {
-        const completedWeeks = Object.keys(WEEK_DATA).filter(
-            w => WEEK_DATA[w].status === 'completed'
-        ).length;
+        const completedWeekNumbers = Object.keys(WEEK_DATA)
+            .filter(w => WEEK_DATA[w].status === 'completed')
+            .map(w => Number(w));
+        const completedWeeks = completedWeekNumbers.length;
         return {
             completed: completedWeeks,
             total: 23,
             percentage: Math.round((completedWeeks / 23) * 100),
+            completedWeekNumbers,
         };
     }, []);
 
