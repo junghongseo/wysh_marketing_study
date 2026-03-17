@@ -21,6 +21,14 @@
       "week": 2,
       "chapter": "Chapter 2 & 3: 사람들은 무엇을 원하는가 & 최소유효시장",
       "started_at": "2026-03-17T11:00:00+09:00",
+      "completed_at": "2026-03-17T22:15:00+09:00",
+      "ideas_count": 3,
+      "feedback_applied": true
+    },
+    {
+      "week": 3,
+      "chapter": "Chapter 3~5: 이야기, 유대, 더 나은 것",
+      "started_at": "2026-03-17T22:15:00+09:00",
       "completed_at": null,
       "ideas_count": 3,
       "feedback_applied": false

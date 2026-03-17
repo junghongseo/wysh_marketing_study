@@ -189,7 +189,7 @@ export const WEEK_DATA = {
     2: {
         week: 2,
         chapter: "Chapter 2 & 3: 사람들은 무엇을 원하는가 & 최소유효시장",
-        status: "active",
+        status: "completed",
         analysis: {
             coreMessage: "우리가 파는 것은 제품이 아니라 '기분'이다. 최소유효시장에 집중하라.",
             keyPrinciples: [
@@ -263,6 +263,91 @@ export const WEEK_DATA = {
                 mfs: { impact: 3, fit: 4, speed: 4, effort: 3, cost: 2, total: 8 },
                 recommendation: "우선순위",
                 risks: ["마이크로 타겟 대상이라 참여율 저조 가능성"],
+            },
+        ],
+        realExecution: {
+            status: "pending",
+            plan: [],
+            retro: "",
+        },
+    },
+    3: {
+        week: 3,
+        chapter: "Chapter 3~5: 이야기, 유대, 더 나은 것",
+        status: "active",
+        analysis: {
+            coreMessage: "사람들은 팩트가 아닌 자신의 세계관을 이해하게 해주는 '이야기'를 산다.",
+            keyPrinciples: [
+                { label: "이야기와 거울", desc: "제품 구매는 나의 가치를 확인하고 증명하는 수단" },
+                { label: "최소 유효 시장", desc: "우리의 가치관을 가장 사랑할 '소수의 부족'에 집중" },
+                { label: "주관적 '더 나은 것'", desc: "가격 인하 경쟁을 멈추고 타겟 고객만의 '경험의 기준'을 선점" },
+            ],
+            fiveSteps: [
+                { step: 1, title: "감정의 엔드스테이트", desc: "요거트를 먹을 때 느끼는 통제감과 만족감을 스토리텔링" },
+                { step: 2, title: "진정성 있는 가이드", desc: "단순 광고가 아닌 일상을 돕는 '관대한 행위(Trend to Table)'" },
+                { step: 3, title: "배타성 확보", desc: "누구에게나 할인하는 대신, 우리 부족만 알아보는 가치 제공" },
+                { step: 4, title: "커뮤니티 소속감", desc: "이벤트 참여자를 1회성이 아닌 폐쇄형 웰니스 서클로 초대" },
+                { step: 5, title: "문화의 확산", desc: "'우리 같은 사람들은 이런 일을 한다'는 부족 문화 형성" },
+            ],
+            wyshApplication: {
+                svm: "단순히 제품을 소비하는 것이 아니라, 세계관에 동조하는 정예 팬덤",
+                changeStory: "영양 정보 소비에서 벗어나, 제품을 통해 평온하고 통제된 내 삶을 실현",
+                culture: "WYSH 피플은 유행이 아닌 진짜 나다운 의식을 묵묵히 지킨다.",
+                xyStatement: "WYSH는 기능성에 매몰된 사람들이(X), 자신의 웰니스 위상을 세우고 증명할 수 있는 이야기를 나누도록(Y) 돕는다.",
+            },
+        },
+        trends: {
+            marketSize: "1주차 대비 클릭 및 인증 캠페인 전환율 (진행 예정)",
+            marketShare: "비공개 웰니스 서클 가입자 수",
+            keyTrends: [
+                { name: "엔드스테이트 마케팅", desc: "제품의 스펙보다 제품이 주는 감정적 결과에 집중" },
+                { name: "비공개 팬덤 커뮤니티", desc: "대규모 마케팅 대신 소속감을 강조하는 클로즈드 커뮤니티" },
+                { name: "주관적 하이엔드 굿즈", desc: "팬덤만 알아볼 수 있는 상징성을 담은 굿즈 활용" },
+            ],
+            threats: [
+                "감성 스토리가 자칫 설명적이고 작위적으로 흐를 위험",
+                "폐쇄형 커뮤니티 운영의 리소스 부담 및 단절감 유발"
+            ],
+        },
+        ideas: [
+            {
+                id: 1,
+                title: "'Trend to Table' 스토리텔링 개편",
+                category: "콘텐츠",
+                categoryEmoji: "📖",
+                description: "레시피나 단백질 함량 설명 대신, 요거트를 완성했을 때 느끼는 '통제감과 미식의 평온함'을 묘사하여 관대한 행위로 인식되게 함.",
+                chapterPrinciple: "팩트가 아닌 자신의 세상을 이해하는 데 도움을 주는 '이야기'를 구매함.",
+                smallestViableAction: "다음 트렌드 레터 실천 가이드를 감정 테마 메시지로 작성",
+                successMetric: "수신자 CTR 대비 전환율의 질적 개선",
+                mfs: { impact: 4, fit: 5, speed: 5, effort: 1, cost: 1, total: 12 },
+                recommendation: "즉시 실행",
+                risks: ["너무 은유적이면 구매 명분이 약해짐"],
+            },
+            {
+                id: 2,
+                title: "소속감 증명 '배타적 표식' 굿즈",
+                category: "브랜딩",
+                categoryEmoji: "🥄",
+                description: "Show Your Ritual 보상으로 흔한 할인 쿠폰 대신, 팬들만 알아보는 상징적 오브제(우드 스푼 등)를 리워드로 제공.",
+                chapterPrinciple: "경쟁 없는 주관적 '더 나은 것(Better)'의 기준 제시.",
+                smallestViableAction: "인증 이벤트 경품을 '위시 전용 리추얼 스푼'으로 공지 변경",
+                successMetric: "굿즈 수령자의 자발적인 2차 인증(리그램) 비율 30%",
+                mfs: { impact: 5, fit: 5, speed: 3, effort: 3, cost: 3, total: 9 },
+                recommendation: "우선순위 부여",
+                risks: ["제작비 부담 및 타겟 미스매치 시 의미 퇴색"],
+            },
+            {
+                id: 3,
+                title: "'WYSH 웰니스 서클' 폐쇄 커뮤니티",
+                category: "커뮤니티",
+                categoryEmoji: "🔒",
+                description: "이벤트 참여자를 1회성 응모자로 두지 않고, 공통 언어를 나누는 비밀 인스타/단톡방으로 초대하여 부족(Tribe)화.",
+                chapterPrinciple: "\"우리 같은 사람들은 이런 일을 한다\"는 소속감 기반 커뮤니티 형성.",
+                smallestViableAction: "참여자에게 비공개 웰니스 서클 팔로우 초대장(DM) 발송",
+                successMetric: "메시지 대비 초대 수락률(가입률) 50%",
+                mfs: { impact: 4, fit: 4, speed: 4, effort: 4, cost: 1, total: 9 },
+                recommendation: "우선순위 부여",
+                risks: ["초기 운영 리소스 부족으로 방치될 리스크"],
             },
         ],
         realExecution: {
