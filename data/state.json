@@ -1,13 +1,13 @@
 {
   "project": "WYSH x Seth Godin Marketing Execution Engine",
   "total_weeks": 23,
-  "current_week": 2,
-  "current_chapter": "Chapter 2 & 3: 사람들은 무엇을 원하는가 & 최소유효시장",
+  "current_week": 4,
+  "current_chapter": "Chapter 6~8: 최소 유효 청중과 우리만의 문화",
   "status": "in_progress",
   "youtube_urls": [],
   "notebooklm_notebook_url": null,
   "created_at": "2026-02-14T10:45:00+09:00",
-  "updated_at": "2026-03-17T11:00:00+09:00",
+  "updated_at": "2026-03-26T06:17:00+09:00",
   "history": [
     {
       "week": 1,
@@ -29,6 +29,14 @@
       "week": 3,
       "chapter": "Chapter 3~5: 이야기, 유대, 더 나은 것",
       "started_at": "2026-03-17T22:15:00+09:00",
+      "completed_at": "2026-03-26T06:17:00+09:00",
+      "ideas_count": 3,
+      "feedback_applied": true
+    },
+    {
+      "week": 4,
+      "chapter": "Chapter 6~8: 최소 유효 청중과 우리만의 문화",
+      "started_at": "2026-03-26T06:17:00+09:00",
       "completed_at": null,
       "ideas_count": 3,
       "feedback_applied": false

@@ -1,0 +1,75 @@
+{
+    "week": 4,
+    "chapter": "Chapter 6~8: 부족, 문화, 위상",
+    "generated_at": "2026-03-26T06:15:00+09:00",
+    "summary": "1.81회의 높은 재구매율을 보여준 392명의 단단한 코어 고객(부족)을 타겟으로, '우리 같은 사람들은 이런 일을 한다'는 문화적 정체성과 배타적 신위(Status)를 굳건히 하는 전략입니다.",
+    "analysis_focus": "최소 유효 청중 레버리지, 배타성(Exclusivity) 부여, Change Story 확립",
+    "ideas": [
+        {
+            "id": 1,
+            "title": "'Tribe Only' 시크릿 플레이버 (Secret Flavor Drop)",
+            "category": "제품/커뮤니티",
+            "description": "대중적인 할인 프로모션 대신, 최근 3개월 내 2회 이상 구매한 코어 고객에게만 노출되는 숨겨진 링크로 한정판 '시크릿 플레이버(예: 피스타치오&체리 그릭요거트)' 구매 기회를 제공합니다.",
+            "chapter_principle": "배타성(Exclusivity) - 모두를 위한 것이 아니라, 우리의 철학에 동의하는 진성 신도들만 알아볼 수 있는 보상을 제공하라. (Chapter 7)",
+            "smallest_viable_action": "코어 고객 392명 타겟으로만 구매 가능한 비공개 상품 페이지 오픈 및 히든 링크 카카오톡 발송.",
+            "success_metric": "시크릿 링크 클릭률 40% 이상, 준비된 한정 수량(예: 100개) 48시간 내 완판",
+            "mfs": {
+                "impact": 5,
+                "fit": 5,
+                "speed": 3,
+                "effort": 4,
+                "cost": 3,
+                "total": 20,
+                "recommendation": "최우선 실행"
+            },
+            "risks": [
+                "한정판 플레이버 R&D 및 소량 생산 효율성 문제"
+            ],
+            "reference_trend": "소셜 클럽 형태의 배타적 D2C 드롭"
+        },
+        {
+            "id": 2,
+            "title": "'VVIP Ritual' User Generated Content 캠페인",
+            "category": "콘텐츠",
+            "description": "코어 고객들이 자신의 일상 속에서 WYSH를 세련되게 플레이팅하거나 섭취하는 순간의 사진을 공유받아, 브랜드 공식 채널의 메인 'Story'로 아카이빙하고 조명합니다.",
+            "chapter_principle": "'우리 같은 사람들은 이런 일을 한다' (People Like Us Do Things Like This) - 기존 소수 고객의 문화를 외부의 새로운 동류 집단에게 보여주는 거울 역할. (Chapter 6)",
+            "smallest_viable_action": "기존 'WYSH 웰니스 서클' 참여자 및 재구매 고객에게 DM으로 고퀄리티 리추얼 이미지 공유 요청 (참여자 전원에게 다음 구매 시 무료배송 등 소소한 혜택 부여).",
+            "success_metric": "캠페인 참여/제출 수 50건 이상 및 해당 스토리의 시청 완료율 상위 10% 진입",
+            "mfs": {
+                "impact": 4,
+                "fit": 5,
+                "speed": 4,
+                "effort": 2,
+                "cost": 1,
+                "total": 16,
+                "recommendation": "즉시 실행"
+            },
+            "risks": [
+                "고객이 자발적으로 고품질의 이미지를 만들어낼 동인 부족 가능성"
+            ],
+            "reference_trend": "브랜드 앰배서더가 아닌 찐고객 중심의 리뷰어화"
+        },
+        {
+            "id": 3,
+            "title": "Marketing XY Statement 기반 배송 인서트 카드 개편",
+            "category": "브랜딩",
+            "description": "배송 박스에 동봉되는 안내문에 단백질, 무지방 등 스펙 나열을 전면 제거하고, '이 요거트를 선택한 당신은 타협하지 않고 최상의 것을 즐길 줄 아는 감각적인 사람입니다'라는 Change Story 선언문을 삽입합니다.",
+            "chapter_principle": "변화의 이야기(Change Story) - 제품 팩트가 아닌 고객이 도달하고자 하는 위상(Status)을 판매하라. (Chapter 8)",
+            "smallest_viable_action": "다음 패키지 인쇄 전, 동봉되는 엽서의 텍스트를 제품 스펙 기반에서 고객 자부심 고취 기반으로 변경.",
+            "success_metric": "고객 인스타그램 언박싱 인증샷(인서트 카드 포함) 발생 주간 20건 이상 달성",
+            "mfs": {
+                "impact": 3,
+                "fit": 5,
+                "speed": 5,
+                "effort": 2,
+                "cost": 2,
+                "total": 17,
+                "recommendation": "점진적 적용"
+            },
+            "risks": [
+                "신규 고객이 제품 보관법이나 영양 정보를 직관적으로 얻기 어려울 수 있음 (디자인 레이아웃으로 보완 필요)"
+            ],
+            "reference_trend": "언박싱 경험에서의 마이크로 카피라이팅 혁신"
+        }
+    ]
+}
