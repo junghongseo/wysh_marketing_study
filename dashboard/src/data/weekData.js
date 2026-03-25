@@ -274,7 +274,7 @@ export const WEEK_DATA = {
     3: {
         week: 3,
         chapter: "Chapter 3~5: 이야기, 유대, 더 나은 것",
-        status: "active",
+        status: "completed",
         analysis: {
             coreMessage: "사람들은 팩트가 아닌 자신의 세계관을 이해하게 해주는 '이야기'를 산다.",
             keyPrinciples: [
