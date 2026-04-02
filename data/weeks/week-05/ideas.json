@@ -1,0 +1,78 @@
+{
+    "week": 5,
+    "chapter": "Chapter 9~11: 동류 집단, 신뢰·긴장, 위상",
+    "generated_at": "2026-04-02T09:20:00+09:00",
+    "summary": "392명의 코어 고객(부족)이 확인된 상태에서, '우리 같은 사람들은 이런 일을 한다'는 문화적 표식을 확립하고, 전략적 긴장감(FOMO)을 통해 자발적 합류를 유도하며, 소비 자체가 위상(Status)이 되는 구조를 설계하는 전략입니다.",
+    "analysis_focus": "문화적 표식(Marker) 설계, 의도적 긴장(Tension) 창출, 연대(Affiliation) 기반 위상(Status) 부여",
+    "ideas": [
+        {
+            "id": 1,
+            "title": "'WYSH Code' 문화 표식 캠페인",
+            "category": "브랜딩/커뮤니티",
+            "description": "WYSH 피플만이 알아보는 고유한 '문화적 표식(Marker)'을 체계적으로 디자인합니다. 특정 플레이팅 스타일(예: 우드볼+베리토핑+나무스푼), 전용 해시태그(#WYSHRitual), 그리고 '밤 10시 리추얼'이라는 시간적 코드를 브랜드의 공식 정체성으로 선언합니다. 이 표식을 사용하는 것 자체가 '우리 같은 사람들'임을 증명하는 입장권이 됩니다.",
+            "chapter_principle": "'우리 같은 사람들은 이런 일을 한다(People Like Us Do Things Like This)' — 타겟 집단이 즉각 알아보는 문화적 표식(Marker)을 설계하라. (Chapter 9)",
+            "smallest_viable_action": "인스타그램 공식 계정에 'WYSH Code' 시리즈 3편 업로드: ①플레이팅 가이드 ②해시태그 선언 ③밤 10시 리추얼 타임 공지",
+            "success_metric": "#WYSHRitual 해시태그 UGC 100건 달성, 코어 고객 프로필 바이오에 해시태그 삽입률 20%",
+            "mfs": {
+                "impact": 5,
+                "fit": 5,
+                "speed": 5,
+                "effort": 2,
+                "cost": 1,
+                "total": 18,
+                "recommendation": "최우선 실행"
+            },
+            "risks": [
+                "표식이 너무 강제적이면 '브랜드 놀이'로 전락할 위험",
+                "해시태그 미참여 시 문화 형성 실패"
+            ],
+            "reference_trend": "Nike Run Club, Aesop의 '선택된 자의 코드'"
+        },
+        {
+            "id": 2,
+            "title": "'Inner Circle' 긴장(Tension) 드롭 시스템",
+            "category": "전환/프로모션",
+            "description": "'코어 고객만 알 수 있는 시크릿 콘텐츠와 구매 기회'를 전략적으로 운영하여 외부 잠재 고객에게 의도적 긴장(FOMO)을 창출합니다. 코어 고객이 SNS에 '#WYSHInnerCircle' 태그와 함께 시크릿 플레이버나 한정판 언박싱을 공유하면, 비회원은 '나는 왜 저걸 모르지?'라는 긴장을 느끼고 합류를 원하게 됩니다. 이 긴장은 WYSH 첫 구매라는 '해소(Relief)' 행동으로 연결됩니다.",
+            "chapter_principle": "의도적인 긴장(Tension)을 창출하고, 참여를 통해 해소(Relief)하게 만들어라 — 이것이 바이럴과 전환의 메커니즘이다. (Chapter 10)",
+            "smallest_viable_action": "코어 고객 전용 카카오톡 시크릿 채널 오픈 → 첫 콘텐츠로 '다음 달 신제품 미리보기' 독점 공개",
+            "success_metric": "시크릿 채널 가입자 150명, 외부 SNS 언급에 의한 신규 유입 50건",
+            "mfs": {
+                "impact": 5,
+                "fit": 5,
+                "speed": 4,
+                "effort": 3,
+                "cost": 2,
+                "total": 17,
+                "recommendation": "즉시 실행"
+            },
+            "risks": [
+                "시크릿 콘텐츠의 퀄리티가 기대에 못 미치면 역효과",
+                "폐쇄적 이미지가 신규 유입 장벽으로 작용할 가능성"
+            ],
+            "reference_trend": "Supreme의 Drop Culture, Glossier's Into The Gloss 커뮤니티"
+        },
+        {
+            "id": 3,
+            "title": "'Self-Care Status' 연대형 위상 프로그램",
+            "category": "커뮤니티/리텐션",
+            "description": "WYSH를 소비하는 것 자체가 '자기 관리에 진심인 사람'이라는 위상(Status)을 부여하는 프로그램입니다. 지배(Dominance)가 아닌 연대(Affiliation) 전략에 집중합니다. 월간 구매 횟수에 따라 '리추얼 파트너 → 리추얼 마스터 → 리추얼 큐레이터' 등급을 부여하되, 등급의 혜택은 할인이 아닌 '문화적 특권'(신제품 네이밍 투표권, 시크릿 레시피 접근권, 오프라인 테이스팅 초대)으로 설계합니다.",
+            "chapter_principle": "위상(Status)은 지배(Dominance)와 연대(Affiliation) 두 축으로 나뉜다 — WYSH는 수평적 연대에서 위상을 찾는 고객을 위한 브랜드다. (Chapter 11)",
+            "smallest_viable_action": "기존 코어 고객 392명에게 '리추얼 파트너' 웰컴 DM 발송 + 등급 체계 안내 랜딩페이지 제작",
+            "success_metric": "등급 프로그램 참여 의향 응답 30%, 3개월 내 리텐션율 기존 대비 20% 상승",
+            "mfs": {
+                "impact": 4,
+                "fit": 5,
+                "speed": 3,
+                "effort": 4,
+                "cost": 2,
+                "total": 14,
+                "recommendation": "점진적 적용"
+            },
+            "risks": [
+                "등급 체계가 오히려 '브랜드 피로감'을 유발할 위험",
+                "문화적 특권의 실질적 가치가 모호하면 참여율 저조"
+            ],
+            "reference_trend": "라이프스타일 브랜드의 멤버십 티어 (Peloton, lululemon Ambassador)"
+        }
+    ]
+}

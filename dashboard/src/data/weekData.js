@@ -354,7 +354,7 @@ export const WEEK_DATA = {
     4: {
         week: 4,
         chapter: "Chapter 6~8: 최소 유효 청중과 우리만의 문화",
-        status: "active",
+        status: "completed",
         analysis: {
             coreMessage: "대중을 위한 간식이 아닌, 특정 세계관을 공유하는 '동류 집단'을 위한 문화를 만들어라.",
             keyPrinciples: [
@@ -428,6 +428,91 @@ export const WEEK_DATA = {
                 mfs: { impact: 3, fit: 5, speed: 5, effort: 2, cost: 2, total: 17 },
                 recommendation: "점진적 적용",
                 risks: ["신규 고객의 필수 제품 정보 인지 저하 가능성 (비주얼 분리 필요)"],
+            },
+        ],
+        realExecution: {
+            status: "pending",
+            plan: [],
+            retro: "",
+        },
+    },
+    5: {
+        week: 5,
+        chapter: "Chapter 9~11: 동류 집단, 신뢰·긴장, 위상",
+        status: "active",
+        analysis: {
+            coreMessage: "문화적 표식(Marker)으로 동류 집단을 묶고, 전략적 긴장(Tension)으로 행동을 유발하며, 연대(Affiliation) 기반 위상(Status)으로 충성도를 완성하라.",
+            keyPrinciples: [
+                { label: "동류 집단과 문화적 표식", desc: "'우리 같은 사람들은 이런 일을 한다'는 문화를 즉각 알아볼 수 있는 표식(Marker)으로 가시화" },
+                { label: "신뢰와 긴장", desc: "의도적 긴장(FOMO)을 창출하고, 참여를 통한 해소로 자발적 전환과 바이럴을 유도" },
+                { label: "위상: 지배 vs 연대", desc: "수직적 지배가 아닌 수평적 연대에서 위상을 찾는 고객을 위한 브랜드 전략" },
+            ],
+            fiveSteps: [
+                { step: 1, title: "표식(Marker) 설계", desc: "WYSH 피플만의 플레이팅 스타일·해시태그·리추얼 타임을 공식 정체성으로 선언" },
+                { step: 2, title: "긴장(Tension) 도입", desc: "시크릿 콘텐츠와 한정 접근으로 '나도 합류하고 싶다'는 FOMO 창출" },
+                { step: 3, title: "패턴 단절 제공", desc: "맛없는 다이어트식의 낡은 패턴을 끊는 새로운 문화적 대안 제시" },
+                { step: 4, title: "해소를 통한 합류", desc: "첫 구매와 커뮤니티 참여로 긴장이 해소되며 소속감 획득" },
+                { step: 5, title: "연대 기반 위상 부여", desc: "등급이 아닌 문화적 특권으로 위상을 설계하여 리텐션 강화" },
+            ],
+            wyshApplication: {
+                svm: "자기 관리를 '고행'이 아닌 '세련된 문화'로 여기며, '우리 같은 사람들'이라는 소속감에서 위상을 확인하는 2030 여성",
+                changeStory: "혼자서 참고 견디는 식단 관리에서 벗어나, 같은 가치관을 공유하는 동류 집단 안에서 서로의 리추얼을 축하하며 함께 성장하는 문화로 변화",
+                culture: "WYSH 피플은 밤 10시, 우드볼에 정성스럽게 플레이팅하고 #WYSHRitual을 남기는 것으로 하루를 마무리한다.",
+                xyStatement: "WYSH는 건강한 자기 관리를 세련된 문화로 승화시키고 싶은 사람들이(X), 동류 집단 속에서 '나는 타협하지 않는 사람'이라는 위상을 확인하도록(Y) 돕는다.",
+            },
+        },
+        trends: {
+            marketSize: "코어 고객 392명 기반 확장 단계",
+            marketShare: "문화적 표식(Marker) 도달률 측정 중",
+            keyTrends: [
+                { name: "Drop Culture", desc: "한정판·시크릿 드롭이 소속감과 FOMO를 동시에 자극" },
+                { name: "Marker Economy", desc: "브랜드 표식(해시태그·스타일)이 곧 정체성의 화폐가 되는 현상" },
+                { name: "Affiliation > Dominance", desc: "수직적 과시보다 수평적 연대에서 위상을 찾는 MZ 소비 트렌드" },
+            ],
+            threats: [
+                "폐쇄적 문화가 신규 유입 장벽으로 작용할 위험",
+                "표식(Marker)이 강제적이면 '브랜드 놀이'로 전락 가능성"
+            ],
+        },
+        ideas: [
+            {
+                id: 1,
+                title: "'WYSH Code' 문화 표식 캠페인",
+                category: "브랜딩/커뮤니티",
+                categoryEmoji: "🎨",
+                description: "WYSH 피플만이 알아보는 고유한 문화적 표식(Marker)을 체계적으로 디자인합니다. 특정 플레이팅 스타일, 전용 해시태그(#WYSHRitual), '밤 10시 리추얼'이라는 시간적 코드를 브랜드의 공식 정체성으로 선언합니다.",
+                chapterPrinciple: "'우리 같은 사람들은 이런 일을 한다' — 타겟 집단이 즉각 알아보는 문화적 표식(Marker)을 설계하라. (Chapter 9)",
+                smallestViableAction: "인스타그램 공식 계정에 'WYSH Code' 시리즈 3편 업로드: ①플레이팅 가이드 ②해시태그 선언 ③밤 10시 리추얼 공지",
+                successMetric: "#WYSHRitual 해시태그 UGC 100건, 코어 고객 프로필 해시태그 삽입률 20%",
+                mfs: { impact: 5, fit: 5, speed: 5, effort: 2, cost: 1, total: 18 },
+                recommendation: "최우선 실행",
+                risks: ["표식이 강제적이면 '브랜드 놀이'로 전락", "해시태그 미참여 시 문화 형성 실패"],
+            },
+            {
+                id: 2,
+                title: "'Inner Circle' 긴장(Tension) 드롭 시스템",
+                category: "전환/프로모션",
+                categoryEmoji: "🔥",
+                description: "코어 고객만 알 수 있는 시크릿 콘텐츠와 구매 기회를 운영하여 외부 잠재 고객에게 의도적 긴장(FOMO)을 창출합니다. 코어 고객이 시크릿 언박싱을 공유하면, 비회원은 합류를 원하게 됩니다.",
+                chapterPrinciple: "의도적 긴장(Tension)을 창출하고, 참여를 통해 해소(Relief)하게 만들어라. (Chapter 10)",
+                smallestViableAction: "코어 고객 전용 카카오톡 시크릿 채널 오픈 → 첫 콘텐츠로 '다음 달 신제품 미리보기' 독점 공개",
+                successMetric: "시크릿 채널 가입자 150명, 외부 SNS 언급에 의한 신규 유입 50건",
+                mfs: { impact: 5, fit: 5, speed: 4, effort: 3, cost: 2, total: 17 },
+                recommendation: "즉시 실행",
+                risks: ["시크릿 콘텐츠 퀄리티가 기대에 못 미치면 역효과", "폐쇄적 이미지가 신규 유입 장벽"],
+            },
+            {
+                id: 3,
+                title: "'Self-Care Status' 연대형 위상 프로그램",
+                category: "커뮤니티/리텐션",
+                categoryEmoji: "👑",
+                description: "WYSH 소비가 '자기 관리에 진심인 사람'이라는 위상(Status)을 부여하는 프로그램. 등급 혜택은 할인이 아닌 문화적 특권(신제품 네이밍 투표권, 시크릿 레시피 접근, 오프라인 테이스팅 초대)으로 설계합니다.",
+                chapterPrinciple: "위상(Status)은 지배(Dominance)와 연대(Affiliation) 두 축으로 나뉜다 — 수평적 연대에서 위상을 설계하라. (Chapter 11)",
+                smallestViableAction: "코어 고객 392명에게 '리추얼 파트너' 웰컴 DM 발송 + 등급 체계 안내 랜딩페이지 제작",
+                successMetric: "등급 프로그램 참여 의향 응답 30%, 3개월 내 리텐션율 20% 상승",
+                mfs: { impact: 4, fit: 5, speed: 3, effort: 4, cost: 2, total: 14 },
+                recommendation: "점진적 적용",
+                risks: ["등급 체계가 브랜드 피로감 유발", "문화적 특권의 실질적 가치 모호"],
             },
         ],
         realExecution: {
