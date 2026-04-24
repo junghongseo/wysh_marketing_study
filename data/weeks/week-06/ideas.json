@@ -1,0 +1,79 @@
+{
+    "week": 6,
+    "chapter": "Chapter 6: Beyond Commodities (일용품을 넘어서)",
+    "generated_at": "2026-04-24T11:30:00+09:00",
+    "summary": "WYSH가 '마트에 널린 다이어트 요거트(일용품)'라는 인식에서 벗어나, 대체 불가능한 프리미엄 웰니스 브랜드로 격상하기 위한 전략적 원칙을 학습한 주차. 구체적 실행 전략은 Week 7에서 수립 예정.",
+    "analysis_focus": "일용품(Commodity) 탈피, 바닥을 향한 경쟁 회피, 브랜드 = 자아상의 약속, 보라빛 소(Remarkable) 전략",
+    "execution_status": "미수립 — Week 7에서 Chapter 7 '꿈과 욕망의 캔버스'와 결합하여 실행 액션 도출 예정",
+    "ideas": [
+        {
+            "id": 1,
+            "title": "'Beyond Specs' 상세페이지 스토리 전환",
+            "category": "브랜딩/콘텐츠",
+            "description": "자사몰 상세페이지 최상단의 '무지방 0g, 단백질 15g' 스펙 나열을 후퇴시키고, '이 요거트를 선택한 당신은 자기 관리조차 가장 세련된 방식으로 즐기는 사람입니다'라는 Change Story를 전면 배치합니다. 스펙은 하단 영양 정보 섹션으로 이동시키되, 감정적 가치를 먼저 전달하는 구조로 전환합니다.",
+            "chapter_principle": "제품은 쓸모(필요)를 충족하지만, 브랜드는 고객의 자아(욕구)를 채운다. 기능 스펙에 매몰되면 대체 가능한 일용품으로 전락한다. (Chapter 6)",
+            "smallest_viable_action": "자사몰 메인 상품 1개의 상세페이지 상단 카피를 스펙 중심 → 스토리 중심으로 A/B 테스트 진행",
+            "success_metric": "스토리 버전의 체류시간 20% 증가, 전환율(CVR) 기존 대비 개선",
+            "mfs": {
+                "impact": 4,
+                "fit": 5,
+                "speed": 5,
+                "effort": 2,
+                "cost": 1,
+                "total": 17,
+                "recommendation": "즉시 실행"
+            },
+            "risks": [
+                "스펙을 중시하는 신규 고객의 정보 부족 우려",
+                "스토리가 추상적이면 오히려 전환율 하락 가능"
+            ],
+            "reference_trend": "Aesop의 감성 중심 상세페이지, Le Labo의 스토리텔링 PDP"
+        },
+        {
+            "id": 2,
+            "title": "'No More Discounts' 할인 프로모션 중단 선언",
+            "category": "가격/브랜딩",
+            "description": "신규 가입 할인, 첫 구매 쿠폰 등 가격 경쟁 전술을 단계적으로 폐기합니다. 대신 '가격 자체가 브랜드 스토리'라는 관점에서, WYSH의 프리미엄 가격이 '나는 하이엔드 웰니스를 향유한다'는 자부심을 부여하는 도구임을 메시지로 전환합니다.",
+            "chapter_principle": "바닥을 향한 경쟁(Race to the Bottom)은 일용품의 낡은 전술이다. 할인은 스스로를 일용품으로 강등시키는 행위. (Chapter 6)",
+            "smallest_viable_action": "다음 달부터 신규 가입 할인 쿠폰 중단 → 대신 '웰컴 리추얼 가이드 카드' 동봉으로 대체",
+            "success_metric": "할인 없이도 신규 전환율 유지(현행 대비 ±5%), 객단가 10% 상승",
+            "mfs": {
+                "impact": 4,
+                "fit": 5,
+                "speed": 4,
+                "effort": 2,
+                "cost": 0,
+                "total": 17,
+                "recommendation": "점진적 적용"
+            },
+            "risks": [
+                "할인 중단 초기 신규 유입 급감 가능성",
+                "경쟁사 할인 공세에 취약해질 수 있음"
+            ],
+            "reference_trend": "Apple의 할인 제로 정책, Dyson의 프리미엄 가격 유지 전략"
+        },
+        {
+            "id": 3,
+            "title": "'Purple Cow' 콘텐츠 차별화 시리즈",
+            "category": "콘텐츠/바이럴",
+            "description": "WYSH만의 '주목할 만한(Remarkable)' 콘텐츠를 기획합니다. 일반적인 레시피 릴스가 아닌, '밤 10시, 조명 아래 WYSH 플레이팅 ASMR', '1분 만에 완성하는 호텔급 디저트', '요거트 아트(Yogurt Art)' 등 시각적으로 압도적이고 공유하고 싶어지는 콘텐츠로 일용품 카테고리에서의 차별화를 달성합니다.",
+            "chapter_principle": "보라빛 소(Purple Cow) — 사람들은 의미 있고 주목할 만한(Remarkable) 스토리와 경험에 프리미엄을 지불한다. (Chapter 6)",
+            "smallest_viable_action": "ASMR 스타일의 '밤 10시 리추얼' 플레이팅 릴스 3편 제작 → 인스타그램/틱톡 동시 업로드",
+            "success_metric": "릴스 평균 조회수 기존 대비 200% 증가, 저장/공유 수 100건 이상",
+            "mfs": {
+                "impact": 5,
+                "fit": 5,
+                "speed": 4,
+                "effort": 3,
+                "cost": 2,
+                "total": 15,
+                "recommendation": "즉시 실행"
+            },
+            "risks": [
+                "ASMR/아트 콘텐츠 제작 역량 부족 시 퀄리티 저하",
+                "트렌드에 편승한 일시적 효과에 그칠 가능성"
+            ],
+            "reference_trend": "식품 ASMR 트렌드, Oddly Satisfying 콘텐츠, 요거트 아트 핀터레스트 트렌드"
+        }
+    ]
+}
